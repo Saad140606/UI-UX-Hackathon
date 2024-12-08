@@ -8,7 +8,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <title>FabricNest</title>
+        <title>Nike</title>
       </head>
       <body>
        

@@ -1,12 +1,13 @@
 import Button from "../../components/Button"; // Assuming you have a Button component
 import Link from "next/link";
+import Image from 'next/image';
 
 export default function NewPage() {
   return (
     <div className="flex flex-col sm:flex-row justify-between items-center p-5 sm:p-10">
       {/* Left Section with Image */}
       <div className="w-full sm:w-1/2 flex justify-center items-center mb-5 sm:mb-0">
-        <img
+        <Image
           src="/images/image1.jpg"
           alt="Product"
           className="w-full sm:w-auto h-auto max-w-full max-h-[650px] object-cover"

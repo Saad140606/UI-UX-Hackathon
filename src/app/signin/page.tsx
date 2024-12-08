@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Signin = () => {
   return (
@@ -63,8 +64,8 @@ const Signin = () => {
         {/* Privacy Policy */}
         <div className="text-center text-gray-500 text-sm mt-6">
           <p>
-            By logging in, you agree to{' '}
-            <span className="underline">Nike's Privacy Policy</span> and{' '}
+            By logging in, you agree to
+            <span className="underline">Nike's Privacy Policy</span> and
             <span className="underline">Terms of Use</span>.
           </p>
         </div>
@@ -79,9 +80,9 @@ const Signin = () => {
         {/* Join Us Section */}
         <div className="text-center text-gray-500 text-sm mt-6">
           <p>
-            Not a Member?{' '}
+            Not a Member?
             <span className="text-black underline">
-              <a href="/joinus">Join Us.</a>
+              <Link href="/joinus">Join Us.</Link>
             </span>
           </p>
         </div>

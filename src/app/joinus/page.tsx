@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SiNike } from "react-icons/si";
+import Link from "next/link";
 
 export default function JoinUs() {
   const [email, setEmail] = useState("");
@@ -136,10 +137,10 @@ export default function JoinUs() {
               className="border-gray-500"
             />
             <span className="text-sm text-gray-600">
-              I agree to the{" "}
-              <a href="#" className="text-blue-500">
+              I agree to the
+              <Link href="#" className="text-blue-500">
                 Terms and Policy
-              </a>
+              </Link>
             </span>
           </div>
 
@@ -152,11 +153,11 @@ export default function JoinUs() {
 
           <div className="text-center mt-4">
             <span className="text-sm text-gray-600">
-              Already have an account?{" "}
+              Already have an account?
             </span>
-            <a href="signin" className="text-blue-500 font-medium">
+            <Link href="signin" className="text-blue-500 font-medium">
               Sign-In
-            </a>
+            </Link>
           </div>
         </div>
       </div>

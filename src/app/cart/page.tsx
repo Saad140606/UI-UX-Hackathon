@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@/components/Button";
 import Link from "next/link";
+import Image from 'next/image';
 
 export default function Cart() {
   return (
@@ -13,7 +14,7 @@ export default function Cart() {
             <h2 className="text-lg sm:text-xl font-bold mb-4">Bag</h2>
             {/* Item 1 */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between border-b pb-4 mb-4">
-              <img
+              <Image
                 src="/images/image5.png"
                 alt="Nike Dri-FIT ADV TechKnit Ultra"
                 className="w-20 h-20 sm:w-24 sm:h-24 rounded-md border"

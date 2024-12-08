@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function cart() {
   return (
@@ -11,7 +12,7 @@ export default function cart() {
             <h2 className="text-lg font-bold mb-4">Bag</h2>
             {/* Item 1 */}
             <div className="flex items-center justify-between border-b pb-4 mb-4">
-              <img
+              <Image
                 src="/path-to-shirt-image.jpg"
                 alt="Nike Dri-FIT ADV TechKnit Ultra"
                 className="w-24 h-24 rounded-md border"

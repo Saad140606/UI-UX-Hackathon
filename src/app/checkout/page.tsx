@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function CheckOut() {
     return (
       <div className="min-h-screen bg-[#FFFFFF] p-4 md:p-6">
@@ -13,7 +15,7 @@ export default function CheckOut() {
             {/* Delivery Options */}
             <div className="mb-4">
               <button className="w-full p-3 border border-gray-300 rounded-lg flex items-center justify-start">
-                <img
+                <Image
                   src="/images/icons/image.png"
                   alt="Delivery"
                   className="w-[24px] h-[24px] mr-3"
@@ -108,7 +110,7 @@ export default function CheckOut() {
             <h2 className="text-xl font-bold mb-4">Order Summary</h2>
             <ul className="space-y-4">
               <li className="flex items-center">
-                <img
+                <Image
                   src="/images/image5.png"
                   alt="T-shirt"
                   className="w-[100px] h-[100px] rounded-md border mr-3"
@@ -119,7 +121,7 @@ export default function CheckOut() {
                 </div>
               </li>
               <li className="flex items-center">
-                <img
+                <Image
                   src="/images/image3.jpg"
                   alt="Shoes"
                   className="w-[100px] h-[100px] rounded-md border mr-3"
