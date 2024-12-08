@@ -230,12 +230,12 @@ export default function HomePage() {
     </div>
     
     <div className="text-center">
-      <h3 className="font-bold mb-4">Kids'</h3>
+      <h3 className="font-bold mb-4">Kids</h3>
       <ul className="space-y-2 text-sm">
         <li>Infant & Toddler Shoes</li>
-        <li>Kids' Shoes</li>
-        <li>Kids' Jordan Shoes</li>
-        <li>Kids' Basketball Shoes</li>
+        <li>Kids Shoes</li>
+        <li>Kids Jordan Shoes</li>
+        <li>Kids Basketball Shoes</li>
       </ul>
     </div>
   </div>

@@ -64,8 +64,8 @@ const Signin = () => {
         {/* Privacy Policy */}
         <div className="text-center text-gray-500 text-sm mt-6">
           <p>
-            By logging in, you agree to
-            <span className="underline">Nike's Privacy Policy</span> and
+            By logging in you agree to
+            <span className="underline">Nikes Privacy Policy</span> and
             <span className="underline">Terms of Use</span>.
           </p>
         </div>

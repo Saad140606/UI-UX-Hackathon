@@ -21,10 +21,10 @@ export default function Cart() {
               />
               <div className="ml-0 sm:ml-4 flex-1 text-center sm:text-left mt-3 sm:mt-0">
                 <h3 className="font-medium text-gray-800">
-                  Nike Dri-FIT ADV TechKnit Ultra
+                  Nike DriFIT ADV TechKnit Ultra
                 </h3>
                 <p className="text-sm text-gray-600">
-                  Men's Short-Sleeve Running Top
+                  Mens Short-Sleeve Running Top
                 </p>
                 <p className="text-sm text-gray-500">
                   Ashen Slate/Cobalt Bliss
@@ -41,7 +41,7 @@ export default function Cart() {
 
             
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between border-b pb-4 mb-4">
-              <img
+              <Image
                 src="/images/image6.png"
                 alt="Nike Air Max 97 SE"
                 className="w-20 h-20 sm:w-24 sm:h-24 rounded-md border"
@@ -50,7 +50,7 @@ export default function Cart() {
                 <h3 className="font-medium text-gray-800">
                   Nike Air Max 97 SE
                 </h3>
-                <p className="text-sm text-gray-600">Men's Shoes</p>
+                <p className="text-sm text-gray-600">Mens Shoes</p>
                 <p className="text-sm text-gray-500">
                   Flat Pewter/Light Bone/Black/White
                 </p>
@@ -91,10 +91,10 @@ export default function Cart() {
 
        
         <div className="mt-6 text-sm text-gray-500 text-center lg:text-left">
-          Free Delivery applies to orders of ₹ 14,000.00 or more.{" "}
-          <a href="#" className="text-blue-500 hover:underline">
+          Free Delivery applies to orders of ₹ 14,000.00 or more.
+          <Link href="#" className="text-blue-500 hover:underline">
             View details
-          </a>
+          </Link>
         </div>
       </div>
     </div>

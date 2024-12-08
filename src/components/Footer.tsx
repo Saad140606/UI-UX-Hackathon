@@ -5,7 +5,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
-import Image from 'next/image';
+
 
 const Footer = () => {
   return (

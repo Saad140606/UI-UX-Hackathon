@@ -9,7 +9,7 @@ export default function CheckOut() {
           <div className="bg-white p-6 w-full md:w-[440px] lg:w-auto">
             <h1 className="text-[21px] font-medium mb-4">How would you like to get your order?</h1>
             <p className="text-[#757575] mb-6 text-sm md:text-base leading-snug">
-            Customs regulation for India require a copy of the recipient's KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. Learn More
+            Customs regulation for India require a copy of the recipients KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for all orders and returns. If your KYC does not match your shipping address, please click the link for more information. Learn More
             </p>
   
             {/* Delivery Options */}

@@ -21,7 +21,7 @@ export default function cart() {
                 <h3 className="font-medium text-gray-800">
                   Nike Dri-FIT ADV TechKnit Ultra
                 </h3>
-                <p className="text-sm text-gray-600">Men's Short-Sleeve Running Top</p>
+                <p className="text-sm text-gray-600">Mens Short-Sleeve Running Top</p>
                 <p className="text-sm text-gray-500">Ashen Slate/Cobalt Bliss</p>
                 <p className="text-sm text-gray-500">Size: L</p>
               </div>
@@ -36,7 +36,7 @@ export default function cart() {
               
               <div className="ml-10 flex-1">
                 <h3 className="font-medium text-gray-800 ">Nike Air Max 97 SE</h3>
-                <p className="text-sm text-gray-600">Men's Shoes</p>
+                <p className="text-sm text-gray-600">Mens Shoes</p>
                 <p className="text-sm text-gray-500">Flat Pewter/Light Bone/Black/White</p>
                 <p className="text-sm text-gray-500">Size: 8</p>
               </div>
