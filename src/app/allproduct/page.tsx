@@ -1,154 +1,85 @@
-'use client';
+import Image from "next/image";
+import Link from "next/link";
 
-import Image from 'next/image';
-import { products } from '../../components/data/detail'; // Assuming this is where `detail2` is located
-import { ProductDetail } from '../../components/data/detail';
-import Link from 'next/link';
+export default function Products() {
+  const products = [
+    { id: 1, name: "Nike Air Max", image: "/images/image1.jpg", colors: "1 Color", price: "₹ 12,500" },
+    { id: 2, name: "Nike Air Force 1", image: "/images/image2.jpg", colors: "1 Color", price: "₹ 10,500" },
+    { id: 3, name: "Nike Court Vision", image: "/images/image3.jpg", colors: "2 Colors", price: "₹ 9,000" },
+    { id: 4, name: "Nike Air Max", image: "/images/image4.jpg", colors: "1 Color", price: "₹ 12,500" },
+    { id: 5, name: "Nike Air Force 1", image: "/images/image5.png", colors: "1 Color", price: "₹ 10,500" },
+    { id: 6, name: "Nike Court Vision", image: "/images/image6.png", colors: "2 Colors", price: "₹ 9,000" },
+    { id: 7, name: "Nike Air Max", image: "/images/image7.png", colors: "1 Color", price: "₹ 12,500" },
+    { id: 8, name: "Nike Air Force 1", image: "/images/image8.png", colors: "1 Color", price: "₹ 10,500" },
+    { id: 9, name: "Nike Court Vision", image: "/images/image6.png", colors: "2 Colors", price: "₹ 9,000" },
+    { id: 10, name: "Nike Air Force 1", image: "/images/image7.png", colors: "1 Color", price: "₹ 10,500" },
+    { id: 11, name: "Nike Court Vision", image: "/images/image8.png", colors: "2 Colors", price: "₹ 9,000" },
+    { id: 12, name: "Nike Court Vision", image: "/images/image5.png", colors: "2 Colors", price: "₹ 9,000" },
+  ];
 
-// ProductCard Component
-interface ProductCardProps {
-  product: ProductDetail;
-}
-
-export function ProductCard({ product }: ProductCardProps) {
-    return (
-      <div
-        key={product.id}
-        className="flex flex-col text-sm sm:text-base leading-relaxed max-w-[150px] sm:max-w-[250px] lg:max-w-[300px]"
-      >
-        <Image
-          src={product.imageUrl}
-          alt={product.name}
-          width={300}
-          height={300}
-          className="w-full h-auto object-cover"
-        />
-        <div className="flex flex-wrap gap-4 sm:gap-10 items-start justify-between mt-3 bg-white">
-          <div className="flex flex-col text-xs sm:text-sm pr-1">
-            <div className="font-medium text-neutral-900">{product.name}</div>
-            <div className="text-neutral-500">{product.description}</div>
-          </div>
-          <div className="self-start font-medium text-right text-neutral-900">
-            {product.price}
-          </div>
-        </div>
-      </div>
-    );
-
-}
-
-export default function Sidebar() {
   return (
-    <div className="flex flex-col md:flex-row">
-      {/* Sidebar */}
-      <aside className="hidden md:block w-1/5 p-4 space-y-8">
-  {/* Sidebar Title */}
-  <h2 className="text-xl font-medium text-slate-800 mb-4">New(500)</h2>
-
-  {/* Categories Section */}
-  <div>
-    <ul className="space-y-3">
-      {[
-        "Women's Fashion",
-        "Men's Fashion",
-        "Electronics",
-        "Home & Lifestyles",
-        "Medicines",
-        "Sports & Outdoor",
-        "Baby's & Toys",
-        "Groceries & Pets",
-        "Health & Beauty",
-      ].map((item, index) => (
-        <li
-          key={index}
-          className="text-slate-800 font-medium leading-tight hover:underline cursor-pointer"
-        >
-          {item}
-        </li>
-      ))}
-    </ul>
-  </div>
-
-  {/* Gender Selection Section */}
-  <div className="relative border-t border-b border-slate-200 py-4">
-    <h3 className="text-lg font-medium mb-3">Gender</h3>
-    <div className="space-y-2">
-      {["Men", "Women", "Unisex"].map((gender, index) => (
-        <div key={index} className="flex items-center">
-          <input
-            type="checkbox"
-            id={gender.toLowerCase()}
-            className="form-checkbox h-4 w-4 text-slate-800 bg-slate-200 border-gray-300 rounded-sm focus:ring-slate-500"
-          />
-          <label
-            htmlFor={gender.toLowerCase()}
-            className="ml-2 text-slate-800 font-medium cursor-pointer"
-          >
-            {gender}
-          </label>
+    <div className="flex">
+      <aside className="w-1/4 bg-white p-4">
+        {/* Sidebar Content */}
+        <h2 className="text-lg font-semibold mb-4">New (500)</h2>
+        <div className="mb-6">
+          <h3 className="font-semibold mb-2">Shop</h3>
+          <ul className="space-y-2">
+            <li><a href="#" className="text-gray-700">Shoes</a></li>
+            <li><a href="#" className="text-gray-700">Sports Bras</a></li>
+            <li><a href="#" className="text-gray-700">Tops & T-Shirts</a></li>
+          </ul>
         </div>
-      ))}
-    </div>
-  </div>
-
-  {/* Kids Section */}
-  <div className="border-b border-slate-200 py-4">
-    <h3 className="text-lg font-medium mb-3">Kids</h3>
-    <div className="space-y-2">
-      {["Girls", "Boys"].map((kid, index) => (
-        <div key={index} className="flex items-center">
-          <input
-            type="checkbox"
-            id={kid.toLowerCase()}
-            className="form-checkbox h-4 w-4 text-slate-800 bg-slate-200 border-gray-300 rounded-sm focus:ring-slate-500"
-          />
-          <label
-            htmlFor={kid.toLowerCase()}
-            className="ml-2 text-slate-800 font-medium cursor-pointer"
-          >
-            {kid}
-          </label>
+        <div className="mb-6">
+          <h3 className="font-semibold mb-2">Gender</h3>
+          <ul className="space-y-2">
+            <li><label><input type="checkbox" className="mr-2 accent-black" />Men</label></li>
+            <li><label><input type="checkbox" className="mr-2 accent-black" />Women</label></li>
+            <li><label><input type="checkbox" className="mr-2 accent-black" />Unisex</label></li>
+          </ul>
         </div>
-      ))}
-    </div>
-  </div>
-
-  {/* Shop By Price Section */}
-  <div className="border-b border-slate-200 py-4">
-    <h3 className="text-lg font-medium mb-3">Shop By Price</h3>
-    <div className="space-y-2">
-      {[
-        "Under ₹2500.00",
-        "₹2501.00 - ₹5000.00",
-      ].map((price, index) => (
-        <div key={index} className="flex items-center">
-          <input
-            type="checkbox"
-            id={`price-${index}`}
-            className="form-checkbox h-4 w-4 text-slate-800 bg-slate-200 border-gray-300 rounded-sm focus:ring-slate-500"
-          />
-          <label
-            htmlFor={`price-${index}`}
-            className="ml-2 text-slate-800 font-medium cursor-pointer"
-          >
-            {price}
-          </label>
+        <div className="mb-6">
+          <h3 className="font-semibold mb-2">Kids</h3>
+          <ul className="space-y-2">
+            <li><label><input type="checkbox" className="mr-2 accent-black" />Boys</label></li>
+            <li><label><input type="checkbox" className="mr-2 accent-black" />Girls</label></li>
+          </ul>
         </div>
-      ))}
-    </div>
-  </div>
-</aside>
+        <div>
+          <h3 className="font-semibold mb-2">Shop By Price</h3>
+          <ul className="space-y-2">
+            <li><label><input type="radio" name="price" className="mr-2 accent-black" />Under ₹ 7,500</label></li>
+            <li><label><input type="radio" name="price" className="mr-2 accent-black" />₹ 7,500 - ₹ 15,000</label></li>
+          </ul>
+        </div>
+      </aside>
 
+      <main className="w-3/4 p-6">
+        {/* Main Content */}
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-xl font-semibold">Sort By</h2>
+          <button className="text-gray-600">Hide Filters</button>
+        </div>
 
-      {/* Products Section */}
-      <Link href={"/productdetails"}>
-      <main className="w-full md:w-3/4 p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6">
-      {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {products.map((product) => (
+            <Link href="/productdetail" key={product.id}>
+              <div className="border p-4 cursor-pointer">
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={200} // Adjust width as needed
+                  height={200} // Adjust height as needed
+                  className="w-full mb-4"
+                />
+                <h3 className="text-lg font-medium">{product.name}</h3>
+                <p className="text-gray-500">{product.colors}</p>
+                <p className="text-gray-900">MRP: {product.price}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </main>
-      </Link>
-      
     </div>
   );
 }
