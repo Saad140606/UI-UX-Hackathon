@@ -9,7 +9,7 @@ export default function HomePage() {
      
       <div className="relative w-full h-screen">
         <Image
-          src="/assets/hero.png" // Replace with the actual image in the public folder
+          src="/assets/hero.png" 
           alt="Sneaker"
           layout="fill"
           objectFit="cover"
@@ -17,7 +17,7 @@ export default function HomePage() {
         />
       </div>
 
-      {/* Content Section */}
+      
       <div className="relative flex flex-col items-center text-center bg-white py-8 px-4 md:py-12">
         <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-widest mb-2">
           First Look
@@ -39,7 +39,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Best of Air Max Section */}
+      
       <div className="bg-white px-4 sm:px-6 py-8 relative">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
           <h2 className="text-lg sm:text-2xl font-bold">Best of Air Max</h2>
@@ -58,7 +58,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Product Carousel */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {[
             { img: "/images/image1.jpg", title: "Nike Air Max Pulse", type: "Women's Shoes", price: "₹ 13,995"},
@@ -87,11 +87,11 @@ export default function HomePage() {
         </div>
       </div>
 
-    {/* New Section (from Uploaded Image) */}
+    
 <div className="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto text-center">
     <Image
-      src="/assets/featured.png" // Replace with your image path
+      src="/assets/featured.png" 
       alt="Running Man"
       width={1200}
       height={600}
@@ -112,7 +112,7 @@ export default function HomePage() {
 <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto">
     <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-left">Gear Up</h2>
-    {/* Shop Men's and Women's with Arrows */}
+    
     <div className="flex flex-col sm:flex-row justify-between mb-6 space-y-4 sm:space-y-0">
       <div className="flex items-center">
         <h2 className="text-base sm:text-lg font-bold text-gray-900">Shop Men</h2>
@@ -136,9 +136,9 @@ export default function HomePage() {
     <div className="bg-white px-4 sm:px-6 py-8 relative">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
       
-        </div>
+      </div>
 
-        {/* Product Carousel */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { img: "/images/image5.png", title: "Nike Dri-FIT ADV TechKnit Ultra", type: "Men's Short-Sleeve Running Top", price: "₹ 3 895"},
@@ -180,7 +180,7 @@ export default function HomePage() {
     </button>
   </div>
 </div>
-{/* Fullscreen Sneaker Image */
+
 <div className="relative w-full h-[50vh] sm:h-[75vh] bg-gray-100">
   <Image
     src="/images/frame.png" 
@@ -191,14 +191,14 @@ export default function HomePage() {
   />
 </div>
 
-/* Flight Essentials Section */}
 
 
-{/* Footer */}
+
+
 <footer className="bg-white py-8 w-full">
-  {/* Footer Links Section */}
+ 
   <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center pl-12 pr-12  ml-4">
-    {/* Column 1 */}
+    
     <div className="text-center">
       <h3 className="font-bold mb-4">Icons</h3>
       <ul className="space-y-2 text-sm">
@@ -208,7 +208,7 @@ export default function HomePage() {
         <li>Air Max 95</li>
       </ul>
     </div>
-    {/* Column 2 */}
+    
     <div className="text-center">
       <h3 className="font-bold mb-4">Shoes</h3>
       <ul className="space-y-2 text-sm">
@@ -218,7 +218,7 @@ export default function HomePage() {
         <li>Running Shoes</li>
       </ul>
     </div>
-    {/* Column 3 */}
+    
     <div className="text-center">
       <h3 className="font-bold mb-4">Clothing</h3>
       <ul className="space-y-2 text-sm">
@@ -228,7 +228,7 @@ export default function HomePage() {
         <li>Shirts & Tops</li>
       </ul>
     </div>
-    {/* Column 4 */}
+    
     <div className="text-center">
       <h3 className="font-bold mb-4">Kids'</h3>
       <ul className="space-y-2 text-sm">
@@ -240,7 +240,7 @@ export default function HomePage() {
     </div>
   </div>
 
-  {/* Bottom Section */}
+ 
     <div className="max-w-7xl mx-auto flex flex-wrap justify-center items-center text-sm">
 
       {/* Social Icons */}

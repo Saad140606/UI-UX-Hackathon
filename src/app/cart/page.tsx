@@ -7,12 +7,12 @@ export default function Cart() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl w-full bg-white p-4 sm:p-6">
-        {/* Bag Section */}
+        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Bag Items */}
+          
           <div className="col-span-2">
             <h2 className="text-lg sm:text-xl font-bold mb-4">Bag</h2>
-            {/* Item 1 */}
+            
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between border-b pb-4 mb-4">
               <Image
                 src="/images/image5.png"
@@ -39,7 +39,7 @@ export default function Cart() {
               </div>
             </div>
 
-            {/* Item 2 */}
+            
             <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between border-b pb-4 mb-4">
               <img
                 src="/images/image6.png"
@@ -65,7 +65,7 @@ export default function Cart() {
             </div>
           </div>
 
-          {/* Summary Section */}
+          
           <div className="bg-gray-100 rounded-lg p-4 sm:p-6 border border-gray-200">
             <h2 className="text-lg sm:text-xl font-bold mb-4">Summary</h2>
             <div className="flex justify-between mb-2">
@@ -89,7 +89,7 @@ export default function Cart() {
           </div>
         </div>
 
-        {/* Free Delivery Section */}
+       
         <div className="mt-6 text-sm text-gray-500 text-center lg:text-left">
           Free Delivery applies to orders of ₹ 14,000.00 or more.{" "}
           <a href="#" className="text-blue-500 hover:underline">

@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function NewPage() {
   return (
     <div className="flex flex-col sm:flex-row justify-between items-center p-5 sm:p-10">
-      {/* Left Section with Image */}
+      
       <div className="w-full sm:w-1/2 flex justify-center items-center mb-5 sm:mb-0">
         <Image
           src="/images/image1.jpg"
@@ -14,7 +14,7 @@ export default function NewPage() {
         />
       </div>
 
-      {/* Right Section with Text and Button */}
+      
       <div className="w-full sm:w-1/2 flex justify-center items-start">
         <div className="flex flex-col gap-3 p-5 sm:p-10">
           <h2 className="text-2xl sm:text-4xl font-bold uppercase text-left">
@@ -29,7 +29,7 @@ export default function NewPage() {
             rich mixture of materials and aged midsole aesthetic give this release an
             artisan finish.
           </p>
-          {/* Price Text Above Button */}
+          
           <p className="text-xl sm:text-2xl font-bold text-left pt-3 pb-2">
             ₹ 8,695.00
           </p>
