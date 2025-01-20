@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SHOES from "./shoes/page";
 
 export default function HomePage() {
   return (
@@ -7,16 +8,17 @@ export default function HomePage() {
       
         <div className="w-full bg-gray-100">
      
-      <div className="relative w-full h-screen">
-        <Image
-          src="/assets/hero.png" 
-          alt="Sneaker"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-        />
-      </div>
-
+        <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
+  <Image
+    src="/assets/hero.png"
+    alt="Stylish sneaker placed against a vibrant background"
+    layout="fill"
+    objectFit="cover" // Ensures the image covers the container
+    objectPosition="center" // Centers the image
+    priority // Optimizes loading for the hero image
+    quality={85} // Sets image quality
+  />
+  </div>
       
       <div className="relative flex flex-col items-center text-center bg-white py-8 px-4 md:py-12">
         <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-widest mb-2">
@@ -40,52 +42,10 @@ export default function HomePage() {
       </div>
 
       
-      <div className="bg-white px-4 sm:px-6 py-8 relative">
-        <div className="flex flex-col sm:flex-row justify-between items-center mb-6 space-y-4 sm:space-y-0">
-          <h2 className="text-lg sm:text-2xl font-bold">Best of Air Max</h2>
-          <div className="flex space-x-2">
-            <button className="px-4 py-2 bg-gray-100 font-bold rounded-full hover:bg-gray-200">
-              Shop
-            </button>
-            <div className="flex space-x-2">
-              <button className="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
-                ←
-              </button>
-              <button className="p-2 bg-gray-300 rounded-full hover:bg-gray-400">
-                →
-              </button>
-            </div>
-          </div>
-        </div>
-
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            { img: "/images/image1.jpg", title: "Nike Air Max Pulse", type: "Women's Shoes", price: "₹ 13,995"},
-            { img: "/images/image2.jpg", title: "Nike Air Max Pulse", type: "Men's Shoes", price: "₹ 13,995" },
-            { img: "/images/image3.jpg", title: "Nike Air Max 97 SE", type: "Men's Shoes", price: "₹ 16,995" },
-          ].map((product, index) => (
-            <div
-              key={index}
-              className="border border-gray-100 rounded-md p-4 flex flex-col items-center"
-            >
-              <Link href={"/productdetail"}>
-              <Image
-                src={product.img}
-                alt={product.title}
-                width={200}
-                height={200}
-                className="w-full h-auto"
-              /> <div className="mt-4 text-center">
-              <h3 className="font-medium text-lg">{product.title}</h3>
-              <p className="text-gray-500 text-sm">{product.type}</p>
-              <p className="font-bold mt-1">{product.price}</p>
-            </div></Link>
-             
-            </div>
-          ))}
-        </div>
-      </div>
+     
+          
+      
+  <SHOES/>
 
     
 <div className="relative bg-white py-16 px-4 sm:px-6 lg:px-8">
