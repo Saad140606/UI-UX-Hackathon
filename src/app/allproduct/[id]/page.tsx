@@ -1,7 +1,8 @@
-import { client } from '@/sanity/lib/client';
-import Link from 'next/link';
-import Button from '@/components/Button';
-import Image from 'next/image';
+import { groq } from "next-sanity";
+import { client } from "@/sanity/lib/client";
+import Image from "next/image";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 type Product = {
   _id: string;
@@ -13,8 +14,8 @@ type Product = {
 };
 
 export default async function ProductDetail({ params }: { params: { id: string } }) {
-  const query = `
-     *[_type == "product" && _id == "${params.id}"][0] {
+  const query = groq`
+    *[_type == "product" && _id == $id][0] {
       _id,
       productName,
       "imageUrl": image.asset->url,
@@ -24,7 +25,7 @@ export default async function ProductDetail({ params }: { params: { id: string }
     }
   `;
 
-  const product: Product = await client.fetch(query);
+  const product: Product | null = await client.fetch(query, { id: params.id });
 
   if (!product) {
     return <div>Product not found</div>;
