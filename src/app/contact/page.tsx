@@ -70,17 +70,17 @@ const Contact = () => {
             </div>
             <div className="mb-6">
               <h4 className="text-lg font-bold mb-2">Can I pay for my order with multiple methods?</h4>
-              <p>No, payment for Nike orders can't be split between multiple payment methods.</p>
+              <p>No, payment for Nike orders cant be split between multiple payment methods.</p>
             </div>
             <div className="mb-6">
               <h4 className="text-lg font-bold mb-2">What payment method is accepted for SNKRS orders?</h4>
               <p>You can use any accepted credit card to pay for your SNKRS order.</p>
             </div>
             <div className="mb-6">
-              <h4 className="text-lg font-bold mb-2">Why don't I see Apple Pay as an option?</h4>
+              <h4 className="text-lg font-bold mb-2">Why dont I see Apple Pay as an option?</h4>
               <p>
-                To see Apple Pay as an option in the Nike App or on Nike.com, you'll need to use a compatible Apple device running the
-                latest OS, be signed in to your iCloud account and have a supported card in your Wallet. Additionally, you'll need to use
+                To see Apple Pay as an option in the Nike App or on Nike.com, youll need to use a compatible Apple device running the
+                latest OS, be signed in to your iCloud account and have a supported card in your Wallet. Additionally, youll need to use
                 Safari to use Apple Pay on Nike.com.
               </p>
             </div>
@@ -95,7 +95,7 @@ const Contact = () => {
             <ul className="space-y-2 ml-6">
               <li>
                 <Link href="#" className="underline font-bold">
-                  WHAT ARE NIKE'S DELIVERY OPTIONS?
+                  WHAT ARE NIKE DELIVERY OPTIONS?
                 </Link>
               </li>
               <li>

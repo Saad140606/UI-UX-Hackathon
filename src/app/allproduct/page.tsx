@@ -1,21 +1,44 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
+import { client } from "@/sanity/lib/client";
 import Link from "next/link";
+import Image from "next/image";
+
+type Product = {
+  _id: string;
+  productName: string;
+  imageUrl: string;
+  colors?: string[];
+  price: number;
+};
 
 export default function Products() {
-  const products = [
-    { id: 1, name: "Nike Air Max", image: "/images/image1.jpg", colors: "1 Color", price: "₹ 12,500" },
-    { id: 2, name: "Nike Air Force 1", image: "/images/image2.jpg", colors: "1 Color", price: "₹ 10,500" },
-    { id: 3, name: "Nike Court Vision", image: "/images/image3.jpg", colors: "2 Colors", price: "₹ 9,000" },
-    { id: 4, name: "Nike Air Max", image: "/images/image4.jpg", colors: "1 Color", price: "₹ 12,500" },
-    { id: 5, name: "Nike Air Force 1", image: "/images/image5.png", colors: "1 Color", price: "₹ 10,500" },
-    { id: 6, name: "Nike Court Vision", image: "/images/image6.png", colors: "2 Colors", price: "₹ 9,000" },
-    { id: 7, name: "Nike Air Max", image: "/images/image7.png", colors: "1 Color", price: "₹ 12,500" },
-    { id: 8, name: "Nike Air Force 1", image: "/images/image8.png", colors: "1 Color", price: "₹ 10,500" },
-    { id: 9, name: "Nike Court Vision", image: "/images/image6.png", colors: "2 Colors", price: "₹ 9,000" },
-    { id: 10, name: "Nike Air Force 1", image: "/images/image7.png", colors: "1 Color", price: "₹ 10,500" },
-    { id: 11, name: "Nike Court Vision", image: "/images/image8.png", colors: "2 Colors", price: "₹ 9,000" },
-    { id: 12, name: "Nike Court Vision", image: "/images/image5.png", colors: "2 Colors", price: "₹ 9,000" },
-  ];
+  const [products, setProducts] = useState<Product[]>([]);
+
+ 
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const query = `
+        *[_type == "product" ]{
+          _id,
+          productName,
+          category,
+          price,
+          inventory,
+          colors,
+          status,
+          "imageUrl": image.asset->url,
+          description
+        }
+      `;
+      const fetchedProducts = await client.fetch(query);
+      setProducts(fetchedProducts);
+    };
+
+    fetchProducts();
+  }, []);
+
 
   return (
     <div className="flex">
@@ -62,17 +85,17 @@ export default function Products() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
-            <Link href="/productdetail" key={product.id}>
+          {products.map((product: Product) => (
+            <Link href={`/allproduct/${product._id}`} key={product._id}>
               <div className="border p-4 cursor-pointer">
                 <Image
-                  src={product.image}
-                  alt={product.name}
+                  src={product.imageUrl}
+                  alt={product.productName}
                   width={200} // Adjust width as needed
                   height={200} // Adjust height as needed
                   className="w-full mb-4"
                 />
-                <h3 className="text-lg font-medium">{product.name}</h3>
+                <h3 className="text-lg font-medium">{product.productName}</h3>
                 <p className="text-gray-500">{product.colors}</p>
                 <p className="text-gray-900">MRP: {product.price}</p>
               </div>

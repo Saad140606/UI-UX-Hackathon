@@ -24,7 +24,7 @@ const Navbar = () => {
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-3 text-black text-[11px] font-medium">
               <li>
-                <Link href="/allproduct">Find a Store</Link>
+                <Link href="/stores">Find a Store</Link>
               </li>
               <span className="h-[14px] w-px bg-gray-400" />
               <li>
@@ -72,7 +72,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex space-x-6 items-center font-medium">
-            <Link href="/page" className="text-black hover:underline">
+            <Link href="/" className="text-black hover:underline">
               New & Featured
             </Link>
             <Link href="/cart" className="text-black hover:underline">

@@ -116,7 +116,7 @@ export default function CheckOut() {
                   className="w-[100px] h-[100px] rounded-md border mr-3"
                 />
                 <div>
-                  <p className="font-normal text-[13px]">Nike Dri-FIT ADV TechKnit Ultra Men's Short-Sleeve Running Top</p>
+                  <p className="font-normal text-[13px]">Nike Dri-FIT ADV TechKnit Ultra Mens Short-Sleeve Running Top</p>
                   <p className="text-gray-500">Qty: 1</p>
                 </div>
               </li>
