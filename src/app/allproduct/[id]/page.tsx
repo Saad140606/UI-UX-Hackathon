@@ -31,9 +31,8 @@ export default async function ProductDetail({ params }: ProductDetailProps) {
       description
     }
   `;
-
-  const product: Product | null = await client.fetch(query, { id: params.id });
-
+const product: Product = await client.fetch(query);
+  
   if (!product) {
     return <div>Product not found</div>;
   }
