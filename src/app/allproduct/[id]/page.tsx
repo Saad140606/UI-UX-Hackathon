@@ -21,7 +21,7 @@ interface ProductDetailProps {
 }
 
 export default async function ProductDetail({ params }: ProductDetailProps) {
-  const query = groq`
+  const query = `
     *[_type == "product" && _id == $id][0] {
       _id,
       productName,
