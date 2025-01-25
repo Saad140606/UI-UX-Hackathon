@@ -8,14 +8,14 @@ const HeroSection = () => {
 
         <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-screen">
   <Image
-    src="/assets/image.png"
+    src={`/assets/image.png`}
     alt="Stylish sneaker placed against a vibrant background"
     objectFit="cover" 
     objectPosition="center" 
+    layout="fill"
     priority 
     quality={85} 
-    width={1400}
-    height={1400}    
+   
   />
   </div>
 
