@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { SiNike } from "react-icons/si";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function JoinUs() {
   const [email, setEmail] = useState("");

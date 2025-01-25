@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import emailjs from "emailjs-com";
+import Image from "next/image";
 
 export default function CheckOut() {
     const { cart } = useCart();
@@ -110,8 +111,10 @@ export default function CheckOut() {
 
                     <div className="mb-6">
                         <button className="w-full p-4 border border-gray-300 rounded-lg flex items-center justify-start">
-                            <img
+                            <Image
                                 src="/assets/Delivery.png"
+                                height={200}
+                                width={200}
                                 alt="Delivery"
                                 className="w-[24px] h-[24px] rounded-md border mr-4"
                             />
