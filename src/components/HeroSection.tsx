@@ -10,8 +10,11 @@ const HeroSection = () => {
   <Image
     src={'/assets/Image.png'}
     alt="Stylish sneaker placed against a vibrant background"
-    height={2000}
-    width={1400}
+    layout="fill"
+    objectFit="cover" // Ensures the image covers the container
+    objectPosition="center" // Centers the image
+    priority // Optimizes loading for the hero image
+    quality={85} // Sets image quality
   />
   </div>
 
