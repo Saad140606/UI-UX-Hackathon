@@ -100,7 +100,7 @@ export default function Bag() {
               <span>Total:</span>
               <span>Rs {subtotal.toLocaleString()}</span>
             </div>
-            <Link href={"/CheckOut"}>
+            <Link href={"/checkout"}>
             <button className="w-full mt-6 bg-black text-white py-3 rounded-3xl font-medium">
               Member Checkout
             </button>
