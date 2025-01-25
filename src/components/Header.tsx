@@ -59,13 +59,13 @@ export default function Header() {
 
           {/* Right - Navigation Links */}
           <nav className="hidden md:flex space-x-4 text-sm">
-            <Link href="/Stores" className="hover:text-gray-800">Find a Store</Link>
+            <Link href={"/Stores"} className="hover:text-gray-800">Find a Store</Link>
             <span className="hidden md:block w-px h-4 bg-black"></span>
-            <Link href="/Help" className="hover:text-gray-800">Help</Link>
+            <Link href={"/Help"} className="hover:text-gray-800">Help</Link>
             <span className="hidden md:block w-px h-4 bg-black"></span>
-            <Link href="/JoinUs" className="hover:text-gray-800">Join Us</Link>
+            <Link href={"/JoinUs"} className="hover:text-gray-800">Join Us</Link>
             <span className="hidden md:block w-px h-4 bg-black"></span>
-            <Link href="/SignIn" className="hover:text-gray-800">Sign In</Link>
+            <Link href={"/SignIn"} className="hover:text-gray-800">Sign In</Link>
           </nav>
            {/* Mobile Menu Button */}
            <button
@@ -80,10 +80,10 @@ export default function Header() {
           <div className="md:hidden bg-white px-4 py-2 shadow-md">
             <nav className="space-y-2 text-black text-[14px] font-medium">
               {/* Mobile Menu Links */}
-              <Link href="/Stores" className="hover:text-gray-700 block">Find a Store</Link>
-              <Link href="/Help" className="hover:text-gray-700 block">Help</Link>
-              <Link href="/JoinUs" className="hover:text-gray-700 block">Join Us</Link>
-              <Link href="/SignIn" className="hover:text-gray-700 block">Sign In</Link>
+              <Link href={"/Stores"} className="hover:text-gray-700 block">Find a Store</Link>
+              <Link href={"/Help"} className="hover:text-gray-700 block">Help</Link>
+              <Link href={"/JoinUs"} className="hover:text-gray-700 block">Join Us</Link>
+              <Link href={"/SignIn"} className="hover:text-gray-700 block">Sign In</Link>
             </nav>
           </div>
         )}
@@ -95,7 +95,7 @@ export default function Header() {
           {/* Left - Logo */}
           <Link href="/">
             <Image
-              src="/assets/Nike.png"
+              src={"/assets/Nike.png"}
               width={50}
               height={50}
               alt="Nike Logo"
@@ -149,17 +149,17 @@ export default function Header() {
 
             {/* Wishlist and Bag */}
             <div className="flex space-x-4">
-              <Link href="/WishList">
+              <Link href={"/WishList"}>
                 <Image
-                  src="/assets/Heart.png"
+                  src={"/assets/Heart.png"}
                   width={36}
                   height={36}
                   alt="Wishlist"
                 />
               </Link>
-              <Link href="/Bag">
+              <Link href={"/Bag"}>
                 <Image
-                  src="/assets/Bag.png"
+                  src={"/assets/Bag.png"}
                   width={36}
                   height={36}
                   alt="Bag"
