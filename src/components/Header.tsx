@@ -59,13 +59,13 @@ export default function Header() {
 
           {/* Right - Navigation Links */}
           <nav className="hidden md:flex space-x-4 text-sm">
-            <Link href={"/Stores"} className="hover:text-gray-800">Find a Store</Link>
-            <span className="hidden md:block w-px h-4 bg-black"></span>
+            <Link href={"/store"} className="hover:text-gray-800">Find a Store</Link>
+            <div className="hidden md:block w-px h-4 bg-black"></div>
             <Link href={"/Help"} className="hover:text-gray-800">Help</Link>
-            <span className="hidden md:block w-px h-4 bg-black"></span>
-            <Link href={"/JoinUs"} className="hover:text-gray-800">Join Us</Link>
-            <span className="hidden md:block w-px h-4 bg-black"></span>
-            <Link href={"/SignIn"} className="hover:text-gray-800">Sign In</Link>
+            <div className="hidden md:block w-px h-4 bg-black"></div>
+            <Link href={"/joinus"} className="hover:text-gray-800">Join Us</Link>
+            <div className="hidden md:block w-px h-4 bg-black"></div>
+            <Link href={"/signin"} className="hover:text-gray-800">Sign In</Link>
           </nav>
            {/* Mobile Menu Button */}
            <button
@@ -80,10 +80,10 @@ export default function Header() {
           <div className="md:hidden bg-white px-4 py-2 shadow-md">
             <nav className="space-y-2 text-black text-[14px] font-medium">
               {/* Mobile Menu Links */}
-              <Link href={"/Stores"} className="hover:text-gray-700 block">Find a Store</Link>
+              <Link href={"/store"} className="hover:text-gray-700 block">Find a Store</Link>
               <Link href={"/Help"} className="hover:text-gray-700 block">Help</Link>
-              <Link href={"/JoinUs"} className="hover:text-gray-700 block">Join Us</Link>
-              <Link href={"/SignIn"} className="hover:text-gray-700 block">Sign In</Link>
+              <Link href={"/joinus"} className="hover:text-gray-700 block">Join Us</Link>
+              <Link href={"/signin"} className="hover:text-gray-700 block">Sign In</Link>
             </nav>
           </div>
         )}
